@@ -1,8 +1,12 @@
 <h1>LIST</h1>
 
 <ul>
-  {{#each this.model as |thing|}}
-    <li>{{thing}}</li>
+  {{#each this.model as |item|}}
+    <li>
+      <button {{action "showItem" item}}>
+        {{item}}
+      </button>
+    </li>
   {{/each}}
 </ul>
 
